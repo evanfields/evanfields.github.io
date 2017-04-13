@@ -94,7 +94,7 @@ st  c^T x <= 13300
     x >= 0 integer
     z binary
 ```
-Solving problem 5 with `L = 1` gives a really interesting solution: per week, 25 peaches, 21 pancakes, 11 tablespoons of butter, and one serving each of egg, milk, olive oil, chicken thigh, granny smith apple, banana, baby carrots, chocolate chips, and other raw fruit.
+Note that there's a natural intepretation of the diversity factor `L`: it's the tastiness "bump" we give to a food which hasn't yet been included in the diet yet. Solving problem 5 with `L = 1` gives a really interesting solution: per week, 25 peaches, 21 pancakes, 11 tablespoons of butter, and one serving each of egg, milk, olive oil, chicken thigh, granny smith apple, banana, baby carrots, chocolate chips, and other raw fruit.
 
 What's happening here? Lots of foods are worth including just enough of to get the diversity bonus, but for most of these foods a second serving per week doesn't make sense: the second serving doesn't increase the diversity score, so those calories should be spent on one of the most delicious foods.
 
