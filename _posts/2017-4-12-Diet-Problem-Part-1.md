@@ -106,4 +106,4 @@ A future post will try to fix these problems as well as explore the impacts of a
 
 [2] More properly, kilocalories, sometimes written Calories. Apparently calories are a deprecated unit, but the kilocalorie is commonly used in the States as a measure of food energy content. For readability and familiarity, I'll stick with writing "calories."
 
-[3] I use [JuMP](https://github.com/JuliaOpt/JuMP.jl) to specify the problem. The solver is Gurobi, which I use via with an academic license.
+[3] I use [JuMP](https://github.com/JuliaOpt/JuMP.jl) to specify the problem. The solver is Gurobi, which I use with an academic license.
