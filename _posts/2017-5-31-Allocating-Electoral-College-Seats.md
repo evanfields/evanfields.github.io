@@ -20,7 +20,7 @@ That last term is nonlinear in the decision variables $c$, but we can use a stan
 $$
 \begin{align*}
 \underset{c,u}{\text{minimize}}\quad & \sum_{i=1}^{51} p_i u_i \\
-\text{such that } & u_i \geq f_i - \frac{c_i}{538} \quad \forall i \\
+\text{such that}\quad & u_i \geq f_i - \frac{c_i}{538} \quad \forall i \\
 & c_i \geq 3 \quad \forall i\\
 & c_i \text{ integer} \\
 & u_i \geq 0
