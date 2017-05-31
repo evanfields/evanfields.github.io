@@ -30,60 +30,61 @@ $$
 Notice that variable $u_i$ is greater than both 0 and the misrepresentation of state $i$. If state $i$ is overrepresented, then $u_i$ will be 0 (since we minimize with a positive coefficient on $u_i$), and if state $i$ is underrepresented, then $u_i$ will be the underrepresentation. This problem is pretty compact; on my aging computer, Gurobi solves it in 0.14 seconds. Nice!
 
 Here's the comparison between the current and suggested allocation:
-
-| "State"                | "Population" | "Current seats" | "Proposed seats" | 
+```
+|  State                 |  Population  |  Current seats  |  Proposed seats  | 
 |------------------------|--------------|-----------------|------------------| 
-| "Alabama"              | 4863300      | 9               | 8                | 
-| "Alaska"               | 741894       | 3               | 3                | 
-| "Arizona"              | 6931071      | 11              | 11               | 
-| "Arkansas"             | 2988248      | 6               | 3                | 
-| "California"           | 39250017     | 55              | 66               | 
-| "Colorado"             | 5540545      | 9               | 9                | 
-| "Connecticut"          | 3576452      | 7               | 3                | 
-| "Delaware"             | 952065       | 3               | 3                | 
-| "District of Columbia" | 681170       | 3               | 3                | 
-| "Florida"              | 20612439     | 29              | 35               | 
-| "Georgia"              | 10310371     | 16              | 17               | 
-| "Hawaii"               | 1428557      | 4               | 3                | 
-| "Idaho"                | 1683140      | 4               | 3                | 
-| "Illinois"             | 12801539     | 20              | 22               | 
-| "Indiana"              | 6633053      | 11              | 11               | 
-| "Iowa"                 | 3134693      | 6               | 3                | 
-| "Kansas"               | 2907289      | 6               | 3                | 
-| "Kentucky"             | 4436974      | 8               | 7                | 
-| "Louisiana"            | 4681666      | 8               | 7                | 
-| "Maine"                | 1331479      | 4               | 3                | 
-| "Maryland"             | 6016447      | 10              | 10               | 
-| "Massachusetts"        | 6811779      | 11              | 11               | 
-| "Michigan"             | 9928301      | 16              | 17               | 
-| "Minnesota"            | 5519952      | 10              | 9                | 
-| "Mississippi"          | 2988726      | 6               | 3                | 
-| "Missouri"             | 6093000      | 10              | 10               | 
-| "Montana"              | 1042520      | 3               | 3                | 
-| "Nebraska"             | 1907116      | 5               | 3                | 
-| "Nevada"               | 2940058      | 6               | 3                | 
-| "New Hampshire"        | 1334795      | 4               | 3                | 
-| "New Jersey"           | 8944469      | 14              | 15               | 
-| "New Mexico"           | 2081015      | 5               | 3                | 
-| "New York"             | 19745289     | 29              | 33               | 
-| "North Carolina"       | 10146788     | 15              | 17               | 
-| "North Dakota"         | 757952       | 3               | 3                | 
-| "Ohio"                 | 11614373     | 18              | 19               | 
-| "Oklahoma"             | 3923561      | 7               | 6                | 
-| "Oregon"               | 4093465      | 7               | 6                | 
-| "Pennsylvania"         | 12802503     | 20              | 22               | 
-| "Rhode Island"         | 1056426      | 4               | 3                | 
-| "South Carolina"       | 4961119      | 9               | 8                | 
-| "South Dakota"         | 865454       | 3               | 3                | 
-| "Tennessee"            | 6651194      | 11              | 11               | 
-| "Texas"                | 27862596     | 38              | 47               | 
-| "Utah"                 | 3051217      | 6               | 3                | 
-| "Vermont"              | 624594       | 3               | 3                | 
-| "Virginia"             | 8411808      | 13              | 14               | 
-| "Washington"           | 7288000      | 12              | 12               | 
-| "West Virginia"        | 1831102      | 5               | 3                | 
-| "Wisconsin"            | 5778708      | 10              | 9                | 
-| "Wyoming"              | 585501       | 3               | 3                | 
+|  Alabama               | 4863300      | 9               | 8                | 
+|  Alaska                | 741894       | 3               | 3                | 
+|  Arizona               | 6931071      | 11              | 11               | 
+|  Arkansas              | 2988248      | 6               | 3                | 
+|  California            | 39250017     | 55              | 66               | 
+|  Colorado              | 5540545      | 9               | 9                | 
+|  Connecticut           | 3576452      | 7               | 3                | 
+|  Delaware              | 952065       | 3               | 3                | 
+|  District of Columbia  | 681170       | 3               | 3                | 
+|  Florida               | 20612439     | 29              | 35               | 
+|  Georgia               | 10310371     | 16              | 17               | 
+|  Hawaii                | 1428557      | 4               | 3                | 
+|  Idaho                 | 1683140      | 4               | 3                | 
+|  Illinois              | 12801539     | 20              | 22               | 
+|  Indiana               | 6633053      | 11              | 11               | 
+|  Iowa                  | 3134693      | 6               | 3                | 
+|  Kansas                | 2907289      | 6               | 3                | 
+|  Kentucky              | 4436974      | 8               | 7                | 
+|  Louisiana             | 4681666      | 8               | 7                | 
+|  Maine                 | 1331479      | 4               | 3                | 
+|  Maryland              | 6016447      | 10              | 10               | 
+|  Massachusetts         | 6811779      | 11              | 11               | 
+|  Michigan              | 9928301      | 16              | 17               | 
+|  Minnesota             | 5519952      | 10              | 9                | 
+|  Mississippi           | 2988726      | 6               | 3                | 
+|  Missouri              | 6093000      | 10              | 10               | 
+|  Montana               | 1042520      | 3               | 3                | 
+|  Nebraska              | 1907116      | 5               | 3                | 
+|  Nevada                | 2940058      | 6               | 3                | 
+|  New Hampshire         | 1334795      | 4               | 3                | 
+|  New Jersey            | 8944469      | 14              | 15               | 
+|  New Mexico            | 2081015      | 5               | 3                | 
+|  New York              | 19745289     | 29              | 33               | 
+|  North Carolina        | 10146788     | 15              | 17               | 
+|  North Dakota          | 757952       | 3               | 3                | 
+|  Ohio                  | 11614373     | 18              | 19               | 
+|  Oklahoma              | 3923561      | 7               | 6                | 
+|  Oregon                | 4093465      | 7               | 6                | 
+|  Pennsylvania          | 12802503     | 20              | 22               | 
+|  Rhode Island          | 1056426      | 4               | 3                | 
+|  South Carolina        | 4961119      | 9               | 8                | 
+|  South Dakota          | 865454       | 3               | 3                | 
+|  Tennessee             | 6651194      | 11              | 11               | 
+|  Texas                 | 27862596     | 38              | 47               | 
+|  Utah                  | 3051217      | 6               | 3                | 
+|  Vermont               | 624594       | 3               | 3                | 
+|  Virginia              | 8411808      | 13              | 14               | 
+|  Washington            | 7288000      | 12              | 12               | 
+|  West Virginia         | 1831102      | 5               | 3                | 
+|  Wisconsin             | 5778708      | 10              | 9                | 
+|  Wyoming               | 585501       | 3               | 3                | 
+```
 
 Roughly, it seems like big states get more seats and medium-sized states get fewer. Small states are already held up by the floor of 3 seats (two senators and a representative), so they don't lose any seats.
 
