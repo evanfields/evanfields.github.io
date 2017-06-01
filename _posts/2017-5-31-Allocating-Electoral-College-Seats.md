@@ -3,7 +3,7 @@ layout: post
 title: Allocating Electoral College Seats
 ---
 
-I was thinking<sup>hi</sup> about the 2016 U.S. Presidential election - unfortunately, that happens a lot these days. The number of electors allocated to each state depends on that state's population, but the allocation is only updated after a census. I was curious how the allocation of electoral seats would change if the census were performed just before the 2016 election and whether that would have made the Electoral College result closer (spoilers: yes, but not by much).
+I was thinking about the 2016 U.S. Presidential election - unfortunately, that happens a lot these days. The number of electors allocated to each state depends on that state's population, but the allocation is only updated after a census. I was curious how the allocation of electoral seats would change if the census were performed just before the 2016 election and whether that would have made the Electoral College result closer (spoilers: yes, but not by much).
 
 For this thought experiment, I did the updated allocation using a small mixed integer program. Integer programming is a powerful (and fun) technique, and it's well suited to modeling different notions of fairness. It's not, however, the tool used for the real allocation: apparently U.S. House seats (and by extension Electoral College seats) are allocated using the [Huntington-Hill method](https://en.wikipedia.org/wiki/Huntington–Hill_method). I know approximately nothing about fair allocation in general or the Huntington-Hill method in particular; feel free to educate me.
 
@@ -11,7 +11,7 @@ Deciding how to allocate seats is a problem more philosophical than mathematical
 
 A particular allocation of seats would seem to be bad to the extent that some people are denied political agency. If, for example, Colorado were given only one seat in the Electoral College, that would seem unfair to the people of Colorado because they have disproportionately little political voice. So for this problem I set the objective as minimizing underrepresentation. 
 
-The population data I used is from [Wikipedia](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population) (on-a-whim experiments = easiest data available) and represents state-level population as of July 1st, 2016. For each state <sup id="a1">[[1]](#f1)</sup> $i$ let $p_i$ be the state's population and $f_i$ be the proportion of the nation's population living in that state, i.e. $f_i = p_i / \sum_j p_j$. For each state $i$, I denote by $c_i$ the number of seats allocated in the Electoral College. Ideally, $\frac{c_i}{538} = f_i$ for every state, but of course this isn't possible. For each state, the underrepresentation is $\left(f_i - \frac{c_i}{538}\right)_+$, i.e. 0 if the state has at least as many seats as its population would suggest, otherwise the difference between its population share and its electoral seat share.
+The population data I used is from [Wikipedia](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population) (on-a-whim experiments = easiest data available) and represents state-level population as of July 1st, 2016. For each state[^1] $i$ let $p_i$ be the state's population and $f_i$ be the proportion of the nation's population living in that state, i.e. $f_i = p_i / \sum_j p_j$. For each state $i$, I denote by $c_i$ the number of seats allocated in the Electoral College. Ideally, $\frac{c_i}{538} = f_i$ for every state, but of course this isn't possible. For each state, the underrepresentation is $\left(f_i - \frac{c_i}{538}\right)_+$, i.e. 0 if the state has at least as many seats as its population would suggest, otherwise the difference between its population share and its electoral seat share.
 
 Because some states have much larger populations than others, it's appropriate to weight each state's underrepresentation by its population. Intuitively, it's better for 100,000 people to be slightly underrepresented than for 1,000,000 people to be underrepresented by the same amount. So the objective will be to minimize $$\sum\limits_{i=1}^{51} p_i \left(f_i - \frac{c_i}{538}\right)_+$$.
 
@@ -97,4 +97,4 @@ This result was actually a bit of a surprise to me: I thought with people genera
 
 I'm not sure there are meaningful lessons to take from all this. That electoral seats should be reallocated more frequently? Maybe, but the census is already underfunded. Perhaps this further emphasizes the terrible importance of voter suppression, which appears to have been quite successful in Florida in 2016. Mainly, integer programming is cool.
 
-<b id="f1">1</b> Counting D.C. as a state, which is why $i$ goes from 1 to 51. [↩](#a1)
+[^1] Counting D.C. as a state, which is why $i$ goes from 1 to 51.
