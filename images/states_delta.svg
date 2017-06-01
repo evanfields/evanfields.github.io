@@ -327,7 +327,7 @@
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="2560"
      inkscape:window-height="1346"
@@ -339,11 +339,12 @@
      fit-margin-bottom="5"
      inkscape:zoom="2.6639266"
      inkscape:cx="272.50341"
-     inkscape:cy="633.11032"
+     inkscape:cy="648.12575"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g4493" /><g
+     inkscape:current-layer="g4493"
+     inkscape:pagecheckerboard="false" /><g
      id="g4493"
      inkscape:groupmode="layer"
      inkscape:label="states"
