@@ -11,7 +11,7 @@ Deciding how to allocate seats is a problem more philosophical than mathematical
 
 A particular allocation of seats would seem to be bad to the extent that some people are denied political agency. If, for example, Colorado were given only one seat in the Electoral College, that would seem unfair to the people of Colorado because they have disproportionately little political voice. So for this problem I set the objective as minimizing underrepresentation. 
 
-The population data I used is from [Wikipedia](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population) (on-a-whim experiments = easiest data available) and represents state-level population as of July 1st, 2016. For each state [1] $i$ let $p_i$ be the state's population and $f_i$ be the proportion of the nation's population living in that state, i.e. $f_i = p_i / \sum_j p_j$. For each state $i$, I denote by $c_i$ the number of seats allocated in the Electoral College. Ideally, $\frac{c_i}{538} = f_i$ for every state, but of course this isn't possible. For each state, the underrepresentation is $\left(f_i - \frac{c_i}{538}\right)_+$, i.e. 0 if the state has at least as many seats as its population would suggest, otherwise the difference between its population share and its electoral seat share.
+The population data I used is from [Wikipedia](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population) (on-a-whim experiments = easiest data available) and represents state-level population as of July 1st, 2016. For each state<sup id="a1">[1](#f1)</sup> $i$ let $p_i$ be the state's population and $f_i$ be the proportion of the nation's population living in that state, i.e. $f_i = p_i / \sum_j p_j$. For each state $i$, I denote by $c_i$ the number of seats allocated in the Electoral College. Ideally, $\frac{c_i}{538} = f_i$ for every state, but of course this isn't possible. For each state, the underrepresentation is $\left(f_i - \frac{c_i}{538}\right)_+$, i.e. 0 if the state has at least as many seats as its population would suggest, otherwise the difference between its population share and its electoral seat share.
 
 Because some states have much larger populations than others, it's appropriate to weight each state's underrepresentation by its population. Intuitively, it's better for 100,000 people to be slightly underrepresented than for 1,000,000 people to be underrepresented by the same amount. So the objective will be to minimize $$\sum\limits_{i=1}^{51} p_i \left(f_i - \frac{c_i}{538}\right)_+$$.
 
@@ -86,6 +86,7 @@ Here's the comparison between the current and suggested allocation:
 |  Wyoming               | 585501       | 3               | 3                | 
 ```
 Or, in graphical form:
+
 ![state-level EV changes]({{ site.baseurl }}/images/states_delta.svg "Changes in electoral seats")
 
 Roughly, it seems like big states get more seats and medium-sized states get fewer. Small states are already held up by the floor of 3 seats (two senators and a representative), so they don't lose any seats.
@@ -96,4 +97,4 @@ This result was actually a bit of a surprise to me: I thought with people genera
 
 I'm not sure there are meaningful lessons to take from all this. That electoral seats should be reallocated more frequently? Maybe, but the census is already underfunded. Perhaps this further emphasizes the terrible importance of voter suppression, which appears to have been quite successful in Florida in 2016. Mainly, integer programming is cool.
 
-[1] Counting D.C. as a state, which is why $i$ goes from 1 to 51
+<b id="f1">1</b> Counting D.C. as a state, which is why $i$ goes from 1 to 51. [↩](#a1)
