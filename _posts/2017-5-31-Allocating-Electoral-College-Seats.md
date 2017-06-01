@@ -97,4 +97,4 @@ This result was actually a bit of a surprise to me: I thought with people genera
 
 I'm not sure there are meaningful lessons to take from all this. That electoral seats should be reallocated more frequently? Maybe, but the census is already underfunded. Perhaps this further emphasizes the terrible importance of voter suppression, which appears to have been quite successful in Florida in 2016. Mainly, integer programming is cool.
 
-[^1] Counting D.C. as a state, which is why $i$ goes from 1 to 51.
+[^1]: Counting D.C. as a state, which is why $i$ goes from 1 to 51.
