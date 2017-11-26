@@ -12,6 +12,8 @@ _Modernist Bread_ is the latest book (or series of 5 or 6 books, depending how y
 
 - Unabashed precision. Does anything boil the blood like a recipe that says "add 2-6 cups extra flour, as needed?" How much flour is in a cup? How am I supposed to know what's needed? And most importantly, how am I supposed to believe that sometimes the recipe needs another two cups, and sometimes it needs another six? It's [not true](http://www.seriouseats.com/2016/09/how-to-avoid-soft-and-sticky-dough-butter-temperature.html) that flour's moisture content changes meaningfully. _Modernist Bread_ gives precise measurements and directions. I'd much rather see that the dough temp should be 77 degrees but mine is only 75 and eh close enough than read that the dough should be slightly warmer than room temp - that doesn't even tell me if my 75 degrees is too hot or too low.
 
+- Recipes are not all variations. In both _Modernist Bread_ and other cookbooks, it's common to see lines like "variation: substitute 100g whole wheat flour for 100g of the white flour in step 2." Fine, makes sense, no need to rewrite the whole recipe with that single change. But when too many of these variations stack up, a full recipe is nice. _MB_ gives both one-line variations and full versions of recipes, generally pretty sanely.
+
 ### Dislikes ###
 - Pretentiousness. I don't deny that the _Modernist Bread_ team has worked hard, accomplished a lot, is all kinds of smart and creative, has the best equipment possible, etc. - but that doesn't mean I enjoy having these facts rubbed in my face. Nathan Myhrvold's self-introduction is particularly egregious; do I really need to know that this guy had a PhD and two master's degrees by age 23 and worked with Stephen Hawking to enjoy his cookbook? The tone and side remarks in the writing seem to suggest that the readers ought to view the _Modernist Bread_ creators as some sort of celebrities. I admire their work, but no thanks.
 
@@ -21,5 +23,9 @@ _Modernist Bread_ is the latest book (or series of 5 or 6 books, depending how y
 
 - Copy errors. This post probably has a dozen typos; I'm aware of the hypocrisy of blaming them for errors in a million-word work. Nonetheless, if you're gonna brag about the number of person-hours and tons of flour and pounds of ink that went into this book, maybe get the page references right?
 
+- Little comparison between recipes. Under the French lead bread umbrella, for example, there's the French lean bread master recipe, the A-plus baguette, the direct dough (no preferment) method, the food processor method, hand mixing and machine mixing variations, the "keep a big chunk of dough in your fridge and section out 500g per day for a fresh loaf" method, etc. Which one should I make? What are the pros and cons? They don't really say. 
+
 ### Conclusion ###
 Complaints notwithstanding, I don't think I'll need to run my heat all winter because my oven is never getting turned off. This is an exciting time to be alive. (Also it was 60F in Cambridge yesterday...)
+
+Last updated 2017-11-26.
