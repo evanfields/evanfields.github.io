@@ -1,0 +1,17 @@
+---
+layout: post
+title: Modernist Bread Recipe Notes
+---
+
+### Initial baking results ###
+Results from the recipes I've tried thus far have been decidedly mixed. In any particular case, error on my part could easily explain dissatisfying results. But repeat mediocrity makes me suspicious. I'm not an expert or professional baker, but I am an experienced amateur baker who has taken pains to follow these recipes faithfully (e.g. measuring yeast and salt with a scale that has a .01g resolution).
+
+- Basic French lean bread was tasty but...basic. I was pretty satisfied with the final loaf and ate it up, but I don't think it was an upgrade on other lean breads I've been making for years. The technique of mixing the salt with a little bit of the water and adding that solution post-autolyze seemed like more trouble than it was worth. The salt didn't dissolve easily in that little water. Next time I can heat the water, so lesson learned I guess. The loaf also came out a bit darker than I prefer; this was particularly surprising because my combo cooker is enameled, which apparently reduces heat transfer. Fermentation and proofing times were spot on, which was nice.
+
+- Pretzels should have been way more pretzely. In place of lye I used baked baking soda following the book's instructions - this is a technique I've had good luck with before. Strangely, _Modernist Bread_ calls for rinsing the pretzels after dipping in the baking soda solution. I found this lead to the dough getting more deformed and, more importantly, losing most of its pretzel essence. 
+
+- Babka was delicious but decidedly squat. The recipe makes enough dough for 3 loaf pans. I have one of the size listed, so I multiplied the recipe by 1/3. Scaling by 1/2 would have been much better. Maybe I had a rough hand with the dough and degassed too muc  I also had poor results with the extra egg washing technique. I believe it works when done properly - just check out [this picture](https://www.instagram.com/p/Bc5q5e-DBEP/?taken-by=modcuisine) - but I wasn't able to reproduce that. My bread was indeed shiny but also had patches of visible baked-on egg wash.
+
+- Levain bagels were tasty and chewy, so great. The much-trumpeted starch slurry for affixing toppings didn't work. As with the egg wash, I believe it's possible: [here's proof](https://mic.com/articles/185648/food-scientist-nathan-myrhvold-figured-out-how-to-keep-everything-bagel-toppings-from-falling-off#.IommGobM5). I made the starch slurry and waited two hours, as instructed. When the bagels were dipped the slurry adhered, so presumably I waited long enough for the slurry to thicken? (Guidance is slim). The trouble came when dipping the bagels in the toppings: most of the toppings adhered, but some fell back off with starch slurry attached, especially when grabbing the bagel to flip it over or remove it from the bowl. Now the bowl of toppings is moist and the toppings are sticking to each other. After two bagels, the bowl of toppings had clumped into granola-like clusters of seeds which were then so heavy they didn't adhere to further bagels. To make matters worse, the starch glaze didn't really dry all the way with the extra baking and then some. So instead of everything bagel with crispy onion bits - the best part - I had slightly soggy onion flakes. I will try this technique again because the eventual payoff looks so good, but I am definitely frustrated with the results and instruction given.
+
+- Chocolate and cherry sourdough was an unmitigated success. I will be making this again.
