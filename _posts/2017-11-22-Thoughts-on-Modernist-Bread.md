@@ -19,13 +19,15 @@ _Modernist Bread_ is the latest book (or series of 5 or 6 books, depending how y
 
 - Wordiness. The introduction (34 pages) boasts that the book has over a million words, but judging by that introduction, maybe half of them are unnecessary. There's repetition. "The best way to learn to make good loaves of bread is to make many loaves of bread. If you're new to baking, your first loaves may not come out perfect, but the good news is that even a flawed loaf of homemade bread is better than most of the bread you'll find at the grocery store." (page xxv) "Practice is often the only path to making great bread; it can take time for beginners to master steps like shaping a loaf or determining when it is properly proofed. Fortunately, it's also rare to bake a complete failure. Even imperfect loaves are usually still a pleasure to eat--and often better than what you would buy at the grocery store." (page xxxii) Repetitions aside, there's cruft as well; in the middle of 150 pages of bread history, I don't need a paragraph intro sentence about how humans have eaten bread for millennia.
 
+    Update: after reading a few hundred more pages I still find there's some general wordiness, but my point estimate of the cruft percentage has moved down to ~20% from ~50%.
+
 - Physical size. The books are not really portable and hard to read in many positions. E.g. sitting at a table with the book flat in front of me, the top lines of text on each page are uncomfortably far away.
 
 - Copy errors. This post probably has a dozen typos; I'm aware of the hypocrisy of blaming them for errors in a million-word work. Nonetheless, if you're gonna brag about the number of person-hours and tons of flour and pounds of ink that went into this book, maybe get the page references right?
 
-- Little comparison between recipes. Under the French lead bread umbrella, for example, there's the French lean bread master recipe, the A-plus baguette, the direct dough (no preferment) method, the food processor method, hand mixing and machine mixing variations, the "keep a big chunk of dough in your fridge and section out 500g per day for a fresh loaf" method, etc. Which one should I make? What are the pros and cons? They don't really say. 
+- Little comparison between recipes. Under the French lean bread umbrella, for example, there's the French lean bread master recipe, the A-plus baguette, the direct dough (no preferment) method, the food processor method, hand mixing and machine mixing variations, the "keep a big chunk of dough in your fridge and section out 500g per day for a fresh loaf" method, etc. Which one should I make? What are the pros and cons? They don't really say. 
 
 ### Conclusion ###
 Complaints notwithstanding, I don't think I'll need to run my heat all winter because my oven is never getting turned off. This is an exciting time to be alive. (Also it was 60F in Cambridge yesterday...)
 
-Last updated 2017-11-26.
+Last updated 2018-1-7.
