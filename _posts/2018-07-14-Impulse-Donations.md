@@ -1,3 +1,8 @@
+---
+layout: post
+title: Impulse Donations
+---
+
 Two facts about my life:
 - Cambridge is covered with street canvassers. [[^1]] I never give these people money, because roughly speaking, outsourcing investment decisions to charismatic strangers on the street seems unwise. I'm also not convinced this is a particularly ethical way to fundraise, but that's an issue for another day. But, post conversation, I always feel guilty: there's a lot of truth to the leading "when it comes down to it, couldn't you afford to give one dollar a day?" It'd be nice to be able to channel that guilt productively.
 - It takes all of about 10 seconds and 3 button presses to impulse buy something on my phone, but I don't know of an equally easy way to make a quick charitable donation. The latter is more pro-social than the former, so ideally it's at least as easy.
@@ -21,6 +26,6 @@ And, thus far, it doesn't just work technically: it also works psychologically. 
 Addendum: the current charities I have are GiveWell, the Against Malaria Foundation, Cool Earth, the ACLU, and the Greater Boston Food Bank. I'm open to more suggestions!
 
 
-[^1] In fact, [the last picture here](https://www.nature.org/membership-giving/donation/monthly-giving/fundraising-in-your-neighborhood/index.htm) shows a canvasser at the T stop I frequent.
+[^1]: In fact, [the last picture here](https://www.nature.org/membership-giving/donation/monthly-giving/fundraising-in-your-neighborhood/index.htm) shows a canvasser at the T stop I frequent.
 
-[^2] Well, earmarked for a donor advised fund, etc., but the money is gone from me and en route to the requested charity.
+[^2]: Well, earmarked for a donor advised fund, etc., but the money is gone from me and en route to the requested charity.
