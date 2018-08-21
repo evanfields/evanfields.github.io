@@ -17,6 +17,8 @@ _Modernist Bread_ is the latest book (or series of 5 or 6 books, depending how y
 ### Dislikes ###
 - Pretentiousness. I don't deny that the _Modernist Bread_ team has worked hard, accomplished a lot, is all kinds of smart and creative, has the best equipment possible, etc. - but that doesn't mean I enjoy having these facts rubbed in my face. Nathan Myhrvold's self-introduction is particularly egregious; do I really need to know that this guy had a PhD and two master's degrees by age 23 and worked with Stephen Hawking to enjoy his cookbook? The tone and side remarks in the writing seem to suggest that the readers ought to view the _Modernist Bread_ creators as some sort of celebrities. I admire their work, but no thanks.
 
+    Update: this also extends to liberal use of words like "discovered," "invented," etc. I don't think I begrudge pride and verbiage over legitimate new inventions. But sometimes learning != invention. For example, the autolyse section (p3-95) describes how the Modernist Bread team "came up with a nontraditional technique." Then the very next page lists books and authors who advocate for the same technique!
+
 - Wordiness. The introduction (34 pages) boasts that the book has over a million words, but judging by that introduction, maybe half of them are unnecessary. There's repetition. "The best way to learn to make good loaves of bread is to make many loaves of bread. If you're new to baking, your first loaves may not come out perfect, but the good news is that even a flawed loaf of homemade bread is better than most of the bread you'll find at the grocery store." (page xxv) "Practice is often the only path to making great bread; it can take time for beginners to master steps like shaping a loaf or determining when it is properly proofed. Fortunately, it's also rare to bake a complete failure. Even imperfect loaves are usually still a pleasure to eat--and often better than what you would buy at the grocery store." (page xxxii) Repetitions aside, there's cruft as well; in the middle of 150 pages of bread history, I don't need a paragraph intro sentence about how humans have eaten bread for millennia.
 
     Update: after reading a few hundred more pages I still find there's some general wordiness, but my point estimate of the cruft percentage has moved down to ~20% from ~50%.
@@ -27,7 +29,9 @@ _Modernist Bread_ is the latest book (or series of 5 or 6 books, depending how y
 
 - Little comparison between recipes. Under the French lean bread umbrella, for example, there's the French lean bread master recipe, the A-plus baguette, the direct dough (no preferment) method, the food processor method, hand mixing and machine mixing variations, the "keep a big chunk of dough in your fridge and section out 500g per day for a fresh loaf" method, etc. Which one should I make? What are the pros and cons? They don't really say. 
 
+- Inconsistent information and recommendations. For example, how does water content of a levain affect acidity? Page 3-45 says increasing hydration increases acidity, but page 3-52 says the opposite. When should you use an autolyse? Book 3's section on autolyse says not to use it when cold proofing or when the dough includes significant prefermented flour. But the recipe for "modernist sourdough" in book 4 has both a cold proof and ~40% levain, yet calls for an autolyse. In both these cases, other variables may explain the apparent contradiction. But the user experience of trying to learn about bread is not great.
+
 ### Conclusion ###
 Complaints notwithstanding, I don't think I'll need to run my heat all winter because my oven is never getting turned off. This is an exciting time to be alive. (Also it was 60F in Cambridge yesterday...)
 
-Last updated 2018-1-7.
+Last updated 2018-08-21.
