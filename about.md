@@ -12,4 +12,4 @@ Strictly recreationally, I am a terrible bassoonist, a pretty decent baker, and 
 
 ### Contact me
 
-![My email]({{ site.baseurl }}/images/email.png)
+![My email]({{ site.baseurl }}/images/email.png){:height="360px" width="52px"}
