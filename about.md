@@ -12,4 +12,4 @@ Strictly recreationally, I am a terrible bassoonist, a pretty decent baker, and 
 
 ### Contact me
 
-[efields@mit.edu](mailto:efields@mit.edu)
+![My email]({{ site.baseurl }}/images/email.png)
