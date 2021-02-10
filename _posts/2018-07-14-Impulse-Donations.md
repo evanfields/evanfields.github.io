@@ -3,6 +3,8 @@ layout: post
 title: Impulse Donations
 ---
 
+Update: the system described in this post no longer works, as PandaPay appears to be defunct. If you know of a replacement for PandaPay or the system described in this post, please let me know!
+
 Two facts about my life:
 - Cambridge is covered with street canvassers. [[^1]] I never give these people money, because roughly speaking, outsourcing investment decisions to charismatic strangers on the street seems unwise. I'm also not convinced this is a particularly ethical way to fundraise, but that's an issue for another day. But, post conversation, I always feel guilty: there's a lot of truth to the leading "when it comes down to it, couldn't you afford to give one dollar a day?" It'd be nice to be able to channel that guilt productively.
 - It takes all of about 10 seconds and 3 button presses to impulse buy something on my phone, but I don't know of an equally easy way to make a quick charitable donation. The latter is more pro-social than the former, so ideally it's at least as easy.
