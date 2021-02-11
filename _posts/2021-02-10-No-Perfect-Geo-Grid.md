@@ -77,13 +77,13 @@ Depending on your use case, it may be totally irrelevant to you whether your gri
 I built a proof of concept geographic grid package to explore what's possible when we ignore the global grid requirement. The world is big so I'm sure somebody has done this before, but I'm not aware of a widely used grid system which makes the same set of tradeoffs I have. I should also add a disclaimer that the code is solidly...fine...and while I'd be delighted for you to look at or copy it (MIT license), I strongly advise against using it as-is for any important work or production systems.
 
 `HexGeoGrids.jl` is a Julia package defining a large set of overlapping hexagonal grids, as well as some basic utilities for working with such grids. Compared to H3, the main advantages of HexGeoGrids are:
-* Grid cells can have nearly arbitrary size: integer edge lengths between 1 and 65,535 meters are supportd.
-* Grid cells are regular hexagons, and over supported grid areas, grid cells are consistently sized and nearly distortion free.
-* Grid cells have a consistent alignment: north-aligned flat-top hexagons, which makes grids look extra nice in typical web Mercator maps.
+* Grid cells can have nearly arbitrary size: integer edge lengths between 1 and 65,535 meters are supportd. H3 only lets the user vary cell area by factors of 7.
+* Grid cells are regular hexagons, and over supported grid areas, grid cells are consistently sized and nearly distortion free. H3 cells vary in size.
+* Grid cells have a consistent alignment: north-aligned flat-top hexagons, which makes grids look extra nice in typical web Mercator maps. H3 cell alignment is inconsistent.
 
 These features come at a cost:
-* There is not a single global grid, but instead many overlapping local subgrids. Each grid cell must identify both the subgrid it belongs to and its coordinates within that subgrid.
-* Subgrids have minimal distortion and consistent alignment only up to about the size of a small country (or medium sized US state), and only exist at all up to about the size of a continent.
+* There is not a single global grid, but instead many overlapping subgrids. Each cell must identify both the subgrid it belongs to and its coordinates within that subgrid.
+* Subgrids have minimal distortion and consistent alignment only up to about the size of a small country (or medium sized US state), and only exist at all up to about the size of a continent. No global grid exists.
 * HexGeoGrids isn't a well maintained and widely used package. In fact, I do some hacky things and am sure anybody who knows more about geodesy than me would be horrified.
 
 ## Examples
