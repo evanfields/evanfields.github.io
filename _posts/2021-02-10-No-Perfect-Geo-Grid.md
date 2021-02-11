@@ -57,7 +57,7 @@ Google's S2 and Uber's H3 navigate the inevitable design tradeoffs slightly diff
 
 **S2** projects the Earth's surface to a cube, which corresponds to dividing the surface into six square-like shapes bounded by geodesics. Each square-like shape is then recursively divided into smaller squares. This strategy gives cells which are perfectly partitioned by cells at a higher resolution, but comes with the expected downsides of square-ish cells: different flavors of cell neighbors, higher perimeter/volume ratio than a hexagon would have, etc. In some parts of the world, the cells assume a more rhombus like shape, I think. I'm not sure how cell area varies over the world.
 
-**H3** projects the Earth's surface to an icosahedron and then does a soccer-ball type pentagon and hexagon tessellation. At every resolution there are exactly 12 pentagons, and the icosahedron orientation is carefully chosen to put all 12 pentagons in the oceans. So unless you're using very coarse cells or doing world-wide ocean mapping, in practice all cells you encounter will be hexagons. 
+**H3** projects the Earth's surface to an icosahedron and then does a soccer-ball type pentagon and hexagon tessellation. At every resolution there are exactly 12 pentagons, and the icosahedron orientation is carefully chosen to put all 12 pentagons in the oceans. So unless you're using very coarse cells or doing world-wide ocean mapping, in practice all cells you encounter will be hexagons. The carefully chosen projection orientation means that the orientation of individual hex cells is beyond the user's control.
 
 As we've seen, hexagons have nice neighbor properties but don't subdivide cleanly. Also, each H3 resolution level changes hexagon area by a factor of 7 (i.e. a hexagon cell is approximately subdivided by 7 smaller cells at one resolution higher). This means the user has quite little control over cell size, especially because of the aforementioned variability in cell size at a given resolution.
 
@@ -83,7 +83,7 @@ I built a proof of concept geographic grid package to explore what's possible wh
 
 These features come at a cost:
 * There is not a single global grid, but instead many overlapping local subgrids. Each grid cell must identify both the subgrid it belongs to and its coordinates within that subgrid.
-* Subgrids have minimal distortion and consistent alignment only up to about the size of a small country (or medium sized US state), and only exist at all up to about the size of a large country.
+* Subgrids have minimal distortion and consistent alignment only up to about the size of a small country (or medium sized US state), and only exist at all up to about the size of a continent.
 * HexGeoGrids isn't a well maintained and widely used package. In fact, I do some hacky things and am sure anybody who knows more about geodesy than me would be horrified.
 
 ## Examples
@@ -91,9 +91,74 @@ The pitcher's mound of Citizens Bank Park, Philadelphia, contained in cells of v
 
 ![CBP]({{ site.baseurl }}/images/geogrids/hgg_cbp.png "Citizens Bank Park with hexes of multiple sizes")
 
-Taiwan covered in grid cells with 40km edges
+The main island of Taiwan covered in cells with edge length 40 kilometers:
 
-Europe covered in grid cells with 40km edges - note the distortions and how hex alignment changes
+![Taiwan]({{ site.baseurl }}/images/geogrids/hgg_taiwan.png "Taiwan's main island covered in 40km hex cells")
+
+Europe covered in grid cells with 60km edges, with a grid centered on Paris: note the distortions and how hex alignment changes. The apparent tendency of hexagons to get larger the further north you look is just typical web Mercator size distortion by latitude. But observe how the hex cells rotate and shrink slightly as you look east or west of Paris; this effect is "real," not just a map distortion.
+
+![Europe]({{ site.baseurl }}/images/geogrids/hgg_eur.png "Europe covered in 60km hex cells")
+
+## How it works
+
+HexGeoGrids defines both `HexSystem`s and `HexCell`s. A `HexSystem` is a grid that covers a part of the Earth; a `HexCell` is, shockingly, a cell in a particular system. Think of a `HexSystem` like
+```
+struct HexSystem
+    center_lon::Int
+    center_lat::Int
+    size::UInt16
+end
+```
+So a `HexSystem` defines a center point and the edge length in meters of `HexCell`s in that system. You may note that the requirement that center points have integer lat/lon puts possible center points close together near the poles and far apart in more equitorial regions. If we call the current HexGeoGrids `v0.1.0`, a great `v0.2.0` feature would be smarter distribution of possible center points over the surface of the Earth. I don't want to simply allow floating point center coordinates, because it's really convenient for index encoding if there are less than `2^16` possible centers.
+
+A `HexCell` simply wraps a `HexSystem` and a hexagon coordinate, the latter of which is defined in my [fork of Hexagons.jl](https://github.com/evanfields/Hexagons.jl). For example, 
+```
+HexCell(
+    HexSystem(1, 2, 3),
+    HexFlatTop(0, 0)
+)
+```
+is the flat top hexagon with [axial coordinates](https://www.redblobgames.com/grids/hexagons/#coordinates-axial) `(0, 0)` in the `HexSystem` centered at the point with `(lon, lat) = (1, 2)` and edge length 3 meters. `CoordAxial(0, 0)` is the hexagon origin, so this `HexCell` is centered at `(lon, lat) = (1, 2)`.
+
+Right now, I've hard-coded that all `HexSystems` use flat top hexagons; a good `v0.2.0` feature would be allowing pointy top as well, or even arbitrary orientation.
+
+Mapping from longitude-latitude space to hexagon space works via an intermediate projection to Cartesian space. For this projection, I use the [Universal Transverse Mercator](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) coordinate system; the projection is handled out of the box by `Geodesy.jl`. The UTM coordinate system divides the Earth's surface into longitude-narrow zones, each stretching from pole to pole. A good explanation of UTM coordinates is beyond the scope of this post and perhaps the span of my abilities. But for our purposes here...
+
+UTM coordinates are Cartesian and in units of meters. The `x` axis is E-W, and the `y` axis roughly corresponds to north. (People who know about geodesy, start cringing extra hard now.) Best I can tell, for any point with `longitude == 3 mod 6`, i.e. halfway between the east and west edges of a UTM zone, the UTM `y` axis perfectly corresponds to north. Observe that in the Cartesian plane, lines parallel to the `y` axis don't converge. But on Earth, lines pointing N/S do converge—at the poles. E.g. imagine you and me standing on the equator, 1 kilometer apart. We both start walking straight north. By the time we're at latitude = 60°, we're only about half a kilometer apart. So, since UTM lines parallel to the `y` axis don't converge, they must veer slightly away from true north near the edges of UTM zones and away from the equator.
+
+To make sure hexagons are nearly north aligned, HexGeoGrids shifts a `HexSystem`'s longitude to be congruent to 3 mod 6 before UTM projection; the opposite shift is performed when transforming back.
+
+So, mapping a `(lon, lat)` tuple to a hexagon in a `HexSystem` looks roughly like:
+```
+function to_hex_cell(lon, lat, hs::HexSystem)
+    shift = 3 - mod(lon, 6)
+    lon_point, lat_point = lon + shfit, lat
+    proj_to_utm = UTMfromLLA(hs.utm_zone.zone, hs.utm_zone.isnorth, wgs84)
+    utmz_hexsystem_center = proj_to_utm(hs.center_lon + shift, hs.center_lat)
+    utmz_point = proj_to_utm(lon_point, lat_point)
+    relative_x, relative_y = utmz_point.x - utmz_center.x, utmz_point.y - utmz_center.y
+    return HexCell(
+        hs,
+        Hexagons.hex_containing(relative_x / hs.size, relative_y / hs.size)
+    )
+end
+```
+Getting `(lon, lat)` coords from a `HexCell`, whether vertices or the center point, inverts the process. I haven't much tuned for performance, but this is acceptably fast; converting a `(lon, lat)` to a `HexCell` or getting the center of a `HexCell` as a `(lon, lat)` pair takes about a microsecond on my computer. As for the `lon, lat` rather than `lat, lon` ordering, all I have to say is: I'm sorry, the war is over, the good guys lost, we must move on.
+
+Lastly, each `HexCell` has a compact string representation which losslessly encodes the cell and the `HexSystem` it lives in. Following H3's example, I call these such a string representation an `index`. Each index is 17 characters long and of the form `<8 digits encoding the hex system>:<8 digits encoding coordinates>`. Digits here are hexadecimal.
+
+For example, the index `"4d950064:7fcd8100"` encodes a hexagon around MIT's Great Dome:
+* `4d95` represents the `HexSystem`'s center at `(lon, lat) = (-71, 42)`. Conveniently, there are 361 possible longitudes (-180 to 180) and 181 possible latitudes, `361 * 181` possible centers barely fits in a 16 bit unsigned integer.
+* `0064`, i.e. 100 in hexadecimal, is the `HexSystem` cell size.
+* `7fcd` and `8100` are the `q` and `r` components of the `HexCell`'s axial coordinates in hexagon space.
+
+![MIT]({{ site.baseurl }}/images/geogrids/hgg_dome.png "MIT's Great Dome in a HexGeoGrids cell")
+
+# Final thoughts
+
+H3 and S2 are amazing libraries. As I've explored grid system design space, I haven't encountered _any_ obvious ideas for making better general purpose global grid systems. Nonetheless, I suspect many people—certainly true for us at Zoba—don't really need a _global_ grid system; they just need a convenient way to build local grid systems. For that use case, I suspect it's possible to do better than the tradeoffs offered by H3/S2. And while I'm of course super biased, I think HexGeoGrids.jl is a step in approximately the right direction.
+
+
 ----
 
 [^1]: Maps in this post are made with [Kepler](https://kepler.gl/), an open source tool for visualizing geospatial data. The underlying maps come from Mapbox and, were they dynamic embeds rather than just screenshots, would include the clickable links [© Kepler.gl](https://kepler.gl/policy/), [© Mapbox](https://www.mapbox.com/about/maps/), [© OpenStreetMap](http://www.openstreetmap.org/about/) and [Improve this map](https://www.mapbox.com/map-feedback/).
