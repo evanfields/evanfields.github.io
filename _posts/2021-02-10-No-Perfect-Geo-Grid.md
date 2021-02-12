@@ -3,6 +3,8 @@ layout: post
 title: The perfect global grid system is impossible; HexGeoGrids.jl
 ---
 
+An exploration of grid system design space, and an alternative to the typical options like H3 and S2.
+
 # Aggressively brief background on grid systems
 
 A global grid system is a way of partitioning the Earth's surface into smaller regions, often known as _cells_. Depending on your perspective and preferred nomenclature, global grids may be closely related to or the same as [discrete global grids](https://en.wikipedia.org/wiki/Discrete_global_grid), [[geo]spatial indices](https://en.wikipedia.org/wiki/Spatial_database#Spatial_index), [geocode systems](https://en.wikipedia.org/wiki/Address_geocoding), etc. The most well known examples are probably [Uber's H3](https://eng.uber.com/h3/), [Google's S2](http://s2geometry.io/), [Geohash](https://en.wikipedia.org/wiki/Geohash), and [Open Location Code](https://en.wikipedia.org/wiki/Open_Location_Code).
@@ -76,7 +78,7 @@ Depending on your use case, it may be totally irrelevant to you whether your gri
 
 I built a proof of concept geographic grid package to explore what's possible when we ignore the global grid requirement. The world is big so I'm sure somebody has done this before, but I'm not aware of a widely used grid system which makes the same set of tradeoffs I have. I should also add a disclaimer that the code is solidly...fine...and while I'd be delighted for you to look at or copy it (MIT license), I strongly advise against using it as-is for any important work or production systems.
 
-`HexGeoGrids.jl` is a Julia package defining a large set of overlapping hexagonal grids, as well as some basic utilities for working with such grids. Compared to H3, the main advantages of HexGeoGrids are:
+`HexGeoGrids.jl` ([GitHub](https://github.com/evanfields/HexGeoGrids.jl)) is a Julia package defining a large set of overlapping hexagonal grids, as well as some basic utilities for working with such grids. Compared to H3, the main advantages of HexGeoGrids are:
 * Grid cells can have nearly arbitrary size: integer edge lengths between 1 and 65,535 meters are supportd. H3 only lets the user vary cell area by factors of 7.
 * Grid cells are regular hexagons, and over supported grid areas, grid cells are consistently sized and nearly distortion free. H3 cells vary in size.
 * Grid cells have a consistent alignment: north-aligned flat-top hexagons, which makes grids look extra nice in typical web Mercator maps. H3 cell alignment is inconsistent.
