@@ -34,7 +34,7 @@ The best design choices are surely context dependent, but we can list some reaso
 
 Unfortunately, these design goals conflict with each other. Let's try to design a grid system that satisfies them. Start with desideratum #2, that cells are regular polygons. The Earth is approximately spherical, and up close spheres look like planes. So our cells must tile the plane. If our cells are regular convex polygons, that means cells must be equilateral triangles, squares, or regular hexagons. 
 
-Triangles and squares violate goal #4 by having different flavors of neighbors. For example, a square cell (in green below) has both edge-neighbors (red) and corner-neighbors (blue); the corner neighbors are much farther away:
+Triangles and squares violate goal #3 by having different flavors of neighbors. For example, a square cell (in green below) has both edge-neighbors (red) and corner-neighbors (blue); the corner neighbors are much farther away:
 
 ![Square neighbors]({{ site.baseurl }}/images/geogrids/square_neighbors.svg "Neighbors of a square cell")
 
