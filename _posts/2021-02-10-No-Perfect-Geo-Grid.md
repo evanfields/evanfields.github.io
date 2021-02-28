@@ -48,7 +48,7 @@ So maybe we should use hexagons? While I do believe hexagons are the best choice
 
 So we've reached a contradiction. Regular polygon grid cells implies triangle, square, or hexagon cells. Each cell having just one kind of neighbor implies hexagonal cells, but each cell subdividing nicely implies not hexagonal cells. ⇒⇐
 
-Maybe we shouldn't have been using convex regular polygons? There are definitely exotic plane tiling schemes that don't rely on regular polygons, but regular polygons are important because they minimize the perimeter to area ratio. One of many reasons this is important: location data is often imprecise. Let's say you know locations only up to ± 10 meters, mabye due to GPS limitations. Then any time you think a point is less than 10 meters from a cell boundary, you should be worried that the point is actually in a neighboring cell. To minimize this situation, we'd want to minimize the perimeter to area ratio, which pushes us towards regular polygons. For example, consider a very spiky rhombus type shape: almost the whole area is near the boundary.
+Maybe we shouldn't have been using convex regular polygons? There are definitely exotic plane tiling schemes that don't rely on regular polygons, but regular polygons are important because they minimize the perimeter to area ratio. One of many reasons this is important: location data is often imprecise. Let's say you know locations only up to ± 10 meters, maybe due to GPS limitations. Then any time you think a point is less than 10 meters from a cell boundary, you should be worried that the point is actually in a neighboring cell. To minimize this situation, we'd want to minimize the perimeter to area ratio, which pushes us towards regular polygons. For example, consider a very spiky rhombus type shape: almost the whole area is near the boundary.
 
 ![Rhombus]({{ site.baseurl }}/images/geogrids/inset.svg "Most of the rhombus' area is near its boundary.")
 
@@ -79,7 +79,7 @@ Depending on your use case, it may be totally irrelevant to you whether your gri
 I built a proof of concept geographic grid package to explore what's possible when we ignore the global grid requirement. The world is big so I'm sure somebody has done this before, but I'm not aware of a widely used grid system which makes the same set of tradeoffs I have. I should also add a disclaimer that the code is solidly...fine...and while I'd be delighted for you to look at or copy it (MIT license), I strongly advise against using it as-is for any important work or production systems.
 
 `HexGeoGrids.jl` ([GitHub](https://github.com/evanfields/HexGeoGrids.jl)) is a Julia package defining a large set of overlapping hexagonal grids, as well as some basic utilities for working with such grids. Compared to H3, the main advantages of HexGeoGrids are:
-* Grid cells can have nearly arbitrary size: integer edge lengths between 1 and 65,535 meters are supportd. H3 only lets the user vary cell area by factors of 7.
+* Grid cells can have nearly arbitrary size: integer edge lengths between 1 and 65,535 meters are supported. H3 only lets the user vary cell area by factors of 7.
 * Grid cells are regular hexagons, and over supported grid areas, grid cells are consistently sized and nearly distortion free. H3 cells vary in size.
 * Grid cells have a consistent alignment: north-aligned flat-top hexagons, which makes grids look extra nice in typical web Mercator maps. H3 cell alignment is inconsistent.
 
