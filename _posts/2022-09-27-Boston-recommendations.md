@@ -44,7 +44,7 @@ Sadly, Boston is not much of a pizza town. Really good pizza can be found, but y
 
 ## Restaurants
 
-**Talulla** in north Cambridge is a delightful neighborhood sorta-fancy restaurant. Strong everything-just-so experience. Bread service: excellent. Cocktails: look like an afterthought on the menu, but excellent. Wine list: apparently excellent, if you're into that kind of thing, which I am not. Crudos: punchy, and excellent. Vegetables: local, delicious, probably free range. Pastas: don't miss. Dessert is a comparative weak spot at merely good. Don't go to often though, it's already hard enough to get a reservation. Do go in the late fall and early winter, when they have cute greenhouses for semi-outdoor dining.
+**Talulla** in north Cambridge is a delightful neighborhood sorta-fancy restaurant. Strong everything-just-so experience. Bread service: excellent. Cocktails: look like an afterthought on the menu, but excellent. Wine list: apparently excellent, if you're into that kind of thing, which I am not. Crudos: punchy, and excellent. Vegetables: local, delicious, probably free range. Pastas: don't miss. Dessert is a comparative weak spot at merely good. Don't go too often though, it's already hard enough for me to get a reservation. Do go in the late fall and early winter, when they have cute greenhouses for semi-outdoor dining.
 
 **Littleburg** in Union Square is a casual takeout-only vegan Mediterranean spot with unpredictable hours. Sandwiches are a strong point, but I've never run into trouble on their menu. Filling, satisfying, delicious shawarma, no animals tortured for your dinner, what's not to love?
 
