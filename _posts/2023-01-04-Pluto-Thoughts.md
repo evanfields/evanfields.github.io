@@ -2,7 +2,7 @@
 layout: post
 title: Thoughts on Pluto.jl
 ---
-This post is about [Pluto.jl](https://plutojl.org/), a reactive notebook environment for the [Julia](https://julialang.org) programming language.
+This post is about [Pluto.jl](https://plutojl.org/), a reactive notebook environment for the [Julia](https://julialang.org) programming language. Spoilers: I recommend it!
 
 For years, I was stridently anti-notebook (as in Jupyter, not the bundle of papers you write in). [Here's a fun talk](https://youtu.be/7jiPeIFXb6U)—not me—laying out some problems with notebooks. Then I watched the [JuliaCon talk inroducing Pluto.jl](https://youtu.be/IAF8DjrQSSk?t=112) and thought gee, that seems to solve almost all my complaints. Maybe I like notebooks after all? But I never spent much time with Pluto until recently, when I used it for a few days for a small self-contained project at work. Here are my thoughts a few days in; your mileage may vary.
 
