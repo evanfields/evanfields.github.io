@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Since this is a semi-professional website, I'm supposed to write "I am" followed by a description of my day job. I am the head of data science at [Zoba](https://www.zoba.com). Before joining Zoba, I did a PhD at MIT's [Operations Research Center](https://orc.mit.edu) working with [Carolina Osorio](https://cee.mit.edu/people_individual/carolina-osorio/).
+Since this is a vaguely-professional-adjacent website, I'm supposed to write "I am" followed by a description of my day job. I am the VP of engineering and data science at [Zoba](https://www.zoba.com). Before joining Zoba, I did a PhD at MIT's [Operations Research Center](https://orc.mit.edu) working with [Carolina Osorio](https://cee.mit.edu/people_individual/carolina-osorio/).
 
 I am particularly excited about space exploration, vaccines and public health, low carbon energy (nuclear and otherwise), urban transportation, building more housing, global development, and effective philanthropy. At the moment I'm not looking for a job, but if you want to chat about these or related topics, definitely drop me a line.
 
