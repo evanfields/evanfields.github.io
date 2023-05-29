@@ -23,12 +23,12 @@ Outer Wilds has resonated with me since I first played it: partly because it's j
 Despite being fictional aliens, the Nomai are deeply human and offer much to admire. I quite enjoy the aesthetics of the Nomai writing, so I decided to build [Nomai Writing](nomai-writing.com), a tool which maps any text to a unique spiral of Nomai-style writing.
 
 ## nomai-writing.com
-#### Main functionality
+### Main functionality
 Input a message, get back a SVG encoding that message as a Nomai-style spiral. For example, here's the spiral for `Outer Wilds is an excellent game that you should definitely play`.
 
 ![Spiral example]({{ site.baseurl }}/images/nomai/example.svg "A short spiral from nomai-writing.com")
 
-#### Features
+### Features
 1. Arbitrary Unicode is supported, meaning messages can be in various languages or combinations thereof, include emoji, etc.
 2. Distinct messages generate unique spirals.[[^1]]
 3. Configurable handwriting mode simulates varying levels of imprecision as if spirals are written by hand.
@@ -63,20 +63,49 @@ function message_to_nomai(message; base = 200_000)
     o = Oracle(message; base)
     glyphs = Glyph[]
     while !(iscomplete(o))
-        push!(glyphs, ask!(o, KNOWN_GLYPHS)) # oracle chooses a glyph
+        # oracle chooses a glyph
+        push!(glyphs, ask!(o, KNOWN_GLYPHS))
     end
     return glyphs
 end
 ```
 
 ### GlyphGrid
+The above mini-algorithm returns a simple list of glyphs and skips important decisions: where glyphs are located relative to each other and how glyphs should connect. These are handled by the `GlyphGrid` type and associated functions. A `GlyphGrid` contains all the "abstract" information of a Nomai writing sample: which glyphs to draw, how the glyphs relate spatially, how the glyphs are connected. It doesn't include any typesetting details like how to put glyphs on a canvas, how big the glyphs should be, etc.
+
+A `GlyphGrid` is a _grid_ because internally it contains a two dimensional grid of possible glyph locations. Each location can contain a glyph or nothing, and glyphs are connected to each other, like so for the string `"Obi-Wan Kenobi"` encoded in base 200,000:
+
+![Glyph grid]({{ site.baseurl }}/images/nomai/glyphgrid.svg "Abstract grid of glyph locations and connections")
+
+There are two "paths" of glyphs through the grid. The paths can overlap at a grid location, in which case only a single glyph is drawn there. Both paths always start at the middle row on the far left, and as an `Oracle` is transformed into a `GlyphGrid` the paths extend to the right one column at a time. The `Oracle` is used to pick the grid locations within each column that have glyphs.
+
+Finally, glyphs along a path in the grid must connect to each other. When the abstract path through the grid indicates that two glyphs should connect, we connect the closest vertices of the two glyphs. If there are multiple pairs of vertices (one from each glyph) at equivalent distances, we let the `Oracle` pick the pair used.
+
 ### Typesetting spirals
+A `GlyphGrid` can be drawn directly, which produces something like the linear writing occasionally seen in-game. Here's `"Obi-Wan Kenobi"` from above drawn that way:
+
+![Nomai linear]({{ site.baseurl }}/images/nomai/obiwan.svg "Linear Obi-Wan")
+
+Typesetting a spiral instead "just" requires mapping the horizontal axis of the `GlyphGrid` to a spiral; the vertical grid axis becomes perpendicular offsets to the spiral.
+
+`NomaiText.jl` does a few tweaks to make typeset spirals look prettier and more authentic:
+* As is the case in-game, glyphs get bigger along the spiral. The first glyph in the densely twisted center of the spiral is half the size of the last glyph at the tail.
+* Accordingly, glyphs are not evenly spaced along the spiral since the larger tail glyphs need more space than the small core glyphs.
+* The spiral period (i.e. how many times the spiral twists) is chosen to approximately match the needed length.
+* The spiral is rotated so that (except for very short spirals) the tail ends midway up the left side of the resulting image.
+
+Here's Obi-Wan once more, now as a spiral:
+
+![Obi-Wan spiral]({{ site.baseurl }}/images/nomai/obiwan_spiral.svg "Spiral Obi-Wan")
 
 ### Tools used
 #### Julia
 All of the logic described here was implemented in Julia, now wrapped up in [NomaiText.jl](https://github.com/evanfields/NomaiText.jl). I decided to write in Julia because it's my preferred language and I don't get to write it much at my day job, but it turned out to be a _great_ choice: expressive and succint enough to make iteration and refactoring easy, but performant enough to save my sanity. I've spent barely any time on performance optimization but tried to write in a reasonably idiomatic (and type stable) way. On my [aging] desktop, typesetting a few sentences takes a second or two: noticeable, but not so long as to be super painful to wait for. Having to wait a few _tens_ of seconds per message would have made developing in a slower language much less pleasant.
 
 #### Luxor.jl
+Luxor.jl is a Julia vector graphics package ("Cairo for tourists"), and this project would have been _much_ harder without it. Luxor handles all the graphics work of canvases and rendering things on screen and generating SVGs etc. Luxor _also_ provides a ton of out-of-the-box geometry tools. For example, the spirals used are straight from Luxor's `spiral` function; I just had to find some shape parameters that looked about right.
+
+While Luxor was a huge enabler for NomaiText overall, at times it was also a significant stumbling block. Luxor enforces a fairly specific mental model of the world: complicated drawings are done by transforming a global drawing _state_ and then drawing locally near the origin. This works well for something like typesetting English characters: translate the global state so that the origin is at the bottom-left corner of the next character to be drawn, draw that character at the origin, repeat. But this paradigm became tricky in NomaiText, especially for spiral typesetting: adjacent glyphs in a `GlyphGrid` will correspond to different locations along the spiral which in turn means the glyphs have different transforms of the global coordinates (location, rotation, and scale). But glyph connections means we have to draw a line between two glyphs with different coordinate systems. This all ended up fine but took me a while to get working properly. Luxor author Cormullion was a huge help here—thanks!
 
 #### Jot.jl and AWS Lambda
 [nomai-writing.com](nomai-writing.com) isn't visited frequently—and mostly by me—so it's neither cost nor compute efficient to have a server always running. Instead, the frontend calls AWS's API Gateway which in turn hits a Lambda function that maps `message string => svg string`. Julia isn't a first class supported language on AWS Lambda, but fortunately the Jot.jl package takes care of almost all the complexity of wrapping your Julia code into a package-compiled binary, wrapping that into a Docker container that implements the Lambda spec, and pushing that container to your AWS account.
