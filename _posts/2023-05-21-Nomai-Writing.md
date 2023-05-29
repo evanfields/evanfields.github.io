@@ -2,7 +2,7 @@
 layout: post
 title: Nomai Writing (nomai-writing.com)
 ---
-![header spiral]({{ site.baseurl }}/images/pretty_spiral.svg "Example Nomai spiral")
+![header spiral]({{ site.baseurl }}/images/nomai/pretty_spiral.svg "Example Nomai spiral")
 
 # Background
 
