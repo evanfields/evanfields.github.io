@@ -86,7 +86,9 @@ A `GlyphGrid` can be drawn directly, which produces something like the linear wr
 
 ![Nomai linear]({{ site.baseurl }}/images/nomai/obiwan.svg "Linear Obi-Wan")
 
-Typesetting a spiral instead "just" requires mapping the horizontal axis of the `GlyphGrid` to a spiral; the vertical grid axis becomes perpendicular offsets to the spiral.
+Typesetting a spiral instead "just" requires mapping the horizontal axis of the `GlyphGrid` to a spiral; the vertical grid axis becomes perpendicular offsets to the spiral. The potential glyph locations around a spiral look like so; notice how the glyphs get bigger and farther apart as you move along the spiral:
+
+![Spiral vis]({{ site.baseurl }}/images/nomai/spiral_vis.svg "Spiral typesetting")
 
 `NomaiText.jl` does a few tweaks to make typeset spirals look prettier and more authentic:
 * As is the case in-game, glyphs get bigger along the spiral. The first glyph in the densely twisted center of the spiral is half the size of the last glyph at the tail.
