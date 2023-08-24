@@ -36,8 +36,9 @@ Over my 100 sampled points, I found an average of 0.69 non-metered parking spots
 
 Fun fact: I also counted bike lanes at my sampled points using analogous logic and found an average of 0.34 bike lanes per point, meaning if you go to a random spot on the streets of Cambridge you're well more than twice as likely to find nearly free parking as you are a bike lane [[^5]]. Perhaps we should improve upon this.
 
-*Thank you to Leyla Tarhan for reading a draft of this post.*
 ----
+
+Thank you to Leyla Tarhan for reading a draft of this post.
 
 [^1]: Sometimes parking is a fig leaf for other concerns not expressable in polite company.
 [^2]: Arguably, actually \\$0 per year. Residents can buy a visitor parking permit for \\$25/year or a visitor parking permit *plus* a resident parking permit for...\\$25/year. You can do the subtraction.
