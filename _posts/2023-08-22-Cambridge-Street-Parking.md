@@ -39,7 +39,7 @@ Fun fact: I also counted bike lanes at my sampled points using analogous logic a
 ----
 
 [^1]: Sometimes parking is a fig leaf for other concerns not expressable in polite company.
-[^2]: Arguably, actually $0 per year. A visitor parking permit costs $25/year; a resident parking permit also costs $25/year but comes with a visitor parking permit. You can do the subtraction...
+[^2]: Arguably, actually \\$0 per year. A visitor parking permit costs \\$25/year; a resident parking permit also costs \\$25/year but comes with a visitor parking permit. You can do the subtraction...
 [^3]: The standard deviation of this mean is pretty large, around .07, so my estimates could easily be +/- 15%. I wish this were order of magnitude smaller, but that root-n scaling on standard deviations of a population mean really gets ya and realistically I was pretty bored of hand labeling points. [Here's the data](https://docs.google.com/spreadsheets/d/1RfaNiy9ffQXxVF3iaUqUZ_rKnj8DcR9nGHgFtD1n24c/edit?usp=sharing).
 [^4]: Anyone got a good efficient bike route that hits them all? Let's ride.
 [^5]: 23% chance of at least one bike lane, 57% chance of at least one parking lane; these aren't quite the same as the average number of bike/parking lanes, because sometimes there are multiple such lanes along a road.
