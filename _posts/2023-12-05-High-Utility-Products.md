@@ -70,7 +70,7 @@ For years I used the super cheap mesh-and-wire laundry hamper from my grad schoo
 ## A bike you enjoy riding
 ![Cool bike]({{ site.baseurl }}/images/high_utility_products/bike.png "Zippy bike"){: .img-60}
 
-I'm super anti-car -- a diatribe for another day -- and think bikes are excellent urban transportation. A bike you actually enjoy riding will get you outside more, breathing fresh air, exercising the legs, living the sustainable dream. For me, that's lately been the pictured endurance road bike from Trek, but go forth and follow your heart, whether it years for electric quasi-motorcycles or vintage steel cruisers or anything between.
+I'm super anti-car -- a diatribe for another day -- and think bikes are excellent urban transportation. A bike you actually enjoy riding will get you outside more, breathing fresh air, exercising the legs, living the sustainable dream. For me, that's lately been the pictured endurance road bike from Trek, but go forth and follow your heart, whether it yearns for electric quasi-motorcycles or vintage steel cruisers or anything between.
 
 # Personal care
 ## Foot roller -- [$35](https://rollrecovery.com/products/r3)
