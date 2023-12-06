@@ -77,6 +77,13 @@ a {
   }
 }
 
+/* Style for inline footnote references */
+sup[role="doc-noteref"] a.footnote {
+  text-decoration: none; /* Removes underline */
+  vertical-align: super; /* Aligns the text superscript */
+  font-size: smaller; /* Optionally, reduce the font size */
+}
+
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
