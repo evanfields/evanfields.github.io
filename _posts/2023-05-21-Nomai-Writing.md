@@ -30,7 +30,7 @@ Input a message, get back a SVG encoding that message as a Nomai-style spiral. F
 
 ### Features
 1. Arbitrary Unicode is supported, meaning messages can be in various languages or combinations thereof, include emoji, etc.
-2. Distinct messages generate unique spirals.[[^1]]
+2. Distinct messages generate unique spirals.[^1]
 3. Configurable handwriting mode simulates varying levels of imprecision as if spirals are written by hand.
 4. Partial support for configurable spiral length. Adjusting the encoding base (details below) affects the output spiral.
 5. Messages of up to ~paragraph length are supported. [NomaiText.jl](https://github.com/evanfields/NomaiText.jl/tree/main) supports arbitrary length if you're patient. E.g. here's the Gettysburg Address ASCII encoded:

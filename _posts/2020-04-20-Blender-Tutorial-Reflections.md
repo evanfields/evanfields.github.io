@@ -4,7 +4,7 @@ title: Blender Tutorial Reflections
 ---
 
 For my entire adult life (and most of my teenage life), I've had a casual interest in computer graphics, especially 3D graphics.
-Accordingly, I've been idly tinkering with [Blender](https://www.blender.org) [[^1]] off and on since about 2005, though don't let the
+Accordingly, I've been idly tinkering with [Blender](https://www.blender.org)[^1] off and on since about 2005, though don't let the
 long history fool you: I have yet to achieve any meaningful proficiency, let alone skill. For normal mortals, getting good at 3D
 art requires dedicated practice, and I've treated Blender as merely a toy to be played with now and again. (To be clear, in capable
 hands it is much more than _just_ a toy--though let the record show I firmly believe toys are important, even for adults.)

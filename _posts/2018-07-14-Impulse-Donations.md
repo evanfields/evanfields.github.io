@@ -6,14 +6,14 @@ title: Impulse Donations
 Update: the system described in this post no longer works, as PandaPay appears to be defunct. If you know of a replacement for PandaPay or the system described in this post, please let me know!
 
 Two facts about my life:
-- Cambridge is covered with street canvassers. [[^1]] I never give these people money, because roughly speaking, outsourcing investment decisions to charismatic strangers on the street seems unwise. I'm also not convinced this is a particularly ethical way to fundraise, but that's an issue for another day. But, post conversation, I always feel guilty: there's a lot of truth to the leading "when it comes down to it, couldn't you afford to give one dollar a day?" It'd be nice to be able to channel that guilt productively.
+- Cambridge is covered with street canvassers.[^1] I never give these people money, because roughly speaking, outsourcing investment decisions to charismatic strangers on the street seems unwise. I'm also not convinced this is a particularly ethical way to fundraise, but that's an issue for another day. But, post conversation, I always feel guilty: there's a lot of truth to the leading "when it comes down to it, couldn't you afford to give one dollar a day?" It'd be nice to be able to channel that guilt productively.
 - It takes all of about 10 seconds and 3 button presses to impulse buy something on my phone, but I don't know of an equally easy way to make a quick charitable donation. The latter is more pro-social than the former, so ideally it's at least as easy.
 
 I don't know much about web stuff but this seemed fixable. Here's what I came up with. I have a Twilio number, and whenever I want to make a donation, I text that number `<name of charity> <dollar amount>`. For example to donate \\$5 to GiveWell and then \\$5 to Cool Earth:
 
 ![Donation text]({{ site.baseurl }}/images/donation_text.jpg "Donation text")
 
-Once a donation text is received, a HTTP request goes out to the [PandaPay](https://www.pandapay.io) API, and a donation is immediately made.[[^2]] Pretty quickly I get a confirmation email:
+Once a donation text is received, a HTTP request goes out to the [PandaPay](https://www.pandapay.io) API, and a donation is immediately made.[^2] Pretty quickly I get a confirmation email:
 
 ![Donation result]({{ site.baseurl }}/images/donation_result.png "Donation result")
 

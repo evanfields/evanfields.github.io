@@ -11,7 +11,7 @@ A global grid system is a way of partitioning the Earth's surface into smaller r
 
 From my day job at [Zoba](www.zoba.com), I'm most familiar with grid systems as a convenient tool for splitting a city into cells of approximately uniform shape and size; these cells become a unit of analysis. For example, if you want to characterize the spatial distribution of shared bikes over a city, it's natural to simply count how many bikes are in each grid cell. In fact, many of our analyses and optimizations are at the cell level: we count vehicles and rides by cell, estimate and forecast demand by cell, estimate the prevalence of mobility competition by cell, and so forth. 
 
-It's against the law to write a blog post about maps without liberal use of visuals, so let's get started.[[^1]] I'll use H3 as an example, both because it's something of a de facto standard and because it's easy to use. These are probably related. Here's how H3 divides North America into very coarse cells:
+It's against the law to write a blog post about maps without liberal use of visuals, so let's get started.[^1] I'll use H3 as an example, both because it's something of a de facto standard and because it's easy to use. These are probably related. Here's how H3 divides North America into very coarse cells:
 
 ![North America]({{ site.baseurl }}/images/geogrids/h3_north_america.png "North America covered by H3 resolution 2 cells")
 
