@@ -1,6 +1,7 @@
 ---
 layout: post
 title: High Utility Product Recommendations
+last_modified_at: 2023-12-06
 ---
 
 Inspired by [Sam Bowman](https://www.sambowman.co/p/things-i-recommend-you-buy-and-use?r=75h33&utm_campaign=post&utm_medium=web), a list of consumer products I derive a ton of benefit from. I recommend them if your preferences are at least vaguely similar to mine.
@@ -31,7 +32,7 @@ The Control Freak also has solid quality of life features. Its electromagnet is 
 Super cheap, many uses in the kitchen. Good for releasing baked goods from pans, flipping small things, peaking under cooking foods of all sizes, scraping jars, stirring, spreading.
 
 ## Bulk chocolate -- variable, here's a [nice 70% dark chocolate for $29/kg](https://www.chocosphere.com/default/category/chef/bits-callets-wafers-feves-minigrammes/cbry-fleur-de-cao-1kg.html)
-Chocolate is, by a wide margin, the food I am snobbiest about. If you also like nice chocolate, consider buying in bulk online. Reliable mid-high brands like Valrhona and Callebaut can be had much cheaper online than in grocery stores or local specialty shops. The above link goes to Chocosphere, which has the delightful combination of low prices, fast service, and knowledgeable staff (call and ask for recommendations). Shipping is also cheap if you use their "if it fits, it ships" option, available on small and medium orders.
+Chocolate is, by a wide margin, the food I am snobbiest about. If you also like nice chocolate, consider buying in bulk online. Reliable mid-high brands like Valrhona and Callebaut can be had much cheaper online than in grocery stores or local specialty shops. The above link goes to Chocosphere, which has the delightful combination of low prices, wide selection, fast service, and knowledgeable staff (call and ask for recommendations). Shipping is also cheap if you use their "if it fits, it ships" option, available on small and medium orders. Compared to other luxuries, fancy chocolate is surprisingly affordable.
 
 ## Ghirardelli 60% chips -- [around $0.45/oz, depending where you buy](https://www.target.com/p/ghirardelli-60-cacao-bittersweet-chocolate-premium-baking-chips-10oz/-/A-13349385)
 ![ghirardelli]({{ site.baseurl }}/images/high_utility_products/ghirardelli.jpg "Ghirardelli"){: .img-80}
@@ -50,6 +51,7 @@ Induction vs. gas stoves has become a culture war topic in the US, which is unfo
 * Gas stoves are a pain to clean because spills and splatters get under the metal grates, so you're constantly cleaning under and around the grates and burners, both of which have lots of corners and edges.
 * Glass top resistive electric stoves get really hot (a coil under the glass heats the glass which touches your pan, so the glass is hotter than the pan), so spilled foods and liquids quickly scorch onto the stove surface and they're not always safe to wipe down.
 * Electric coil stoves combine the worst of both of these.
+
 In contrast, induction stoves generate heat _inside_ your pans, so the smooth glass top gets only modestly warm from contact with the hot pans. You can easily wipe down the smooth glass surface without burning yourself, food and grease don't scorch onto the glass because it's not that hot, and there are no grates to fiddle with.
 
 Induction stovetops also become usable space in a kitchen when not acting as a stove. I put cookbooks on top of my induction range (when off) all the time -- I know that the glass won't be too hot even if I just used the stove, and accidentally turning on the stove will not ignite the book (compare to putting a flamable book on a gas stove...).
@@ -61,16 +63,19 @@ The easy-to-use benefits of induction should apply to any range. My wife and I w
 # Home
 ## Nice laundry basket -- [around $30](https://www.etsy.com/listing/828880089/extra-large-blanket-basket-for-nursery)
 ![basket]({{ site.baseurl }}/images/high_utility_products/basket.avif "Basket"){: .img-50}
+
 For years I used the super cheap mesh-and-wire laundry hamper from my grad school days. Then it broke and my wife upgraded me to this style, and wow, so much better: sturdier, nicer to touch, nicer to look at.
 
 # Lifestyle
 ## A bike you enjoy riding
 ![Cool bike]({{ site.baseurl }}/images/high_utility_products/bike.png "Zippy bike"){: .img-60}
+
 I'm super anti-car -- a diatribe for another day -- and think bikes are excellent urban transportation. A bike you actually enjoy riding will get you outside more, breathing fresh air, exercising the legs, living the sustainable dream. For me, that's lately been the pictured endurance road bike from Trek, but go forth and follow your heart, whether it years for electric quasi-motorcycles or vintage steel cruisers or anything between.
 
 # Personal care
 ## Foot roller -- [$35](https://rollrecovery.com/products/r3)
 ![roller]({{ site.baseurl }}/images/high_utility_products/roller.png "Foot roller"){: .img-50}
+
 One of my feet has been stiff for years and, post knee surgery, perpetually achey. This roller is better than a lacross ball at digging into the right parts of the foot without slipping around.
 
 # Tech

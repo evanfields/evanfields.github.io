@@ -7,6 +7,9 @@ layout: default
   
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
+    {% if page.last_modified_at %}
+    <br>Last updated {{ page.last_modified_at | date: "%B %e, %Y" }}
+    {% endif %}
   </div>
   
   <div class="entry">
