@@ -12,14 +12,14 @@ A [previous post](https://evanfields.net/Cambridge-Street-Parking/) estimated Ca
 Adding these to the on street spaces brings my estimated lower bound of Cambridge parking supply to 107,419:
 
 
-| Location      | Count       |
-|:--------------|------------:|
-| On Street     | 31,474      |
-| Parking Lot   | 43,797      |
-| Driveways     | 27,368      |
-| Meters        | 3,400       |
-| City Garages  | 1,380       |
-| **Total**     | **107,419** |
+| Flavor       | Count  |
+|--------------|--------|
+| On Street    | 31,474 |
+| Parking Lot  | 43,797 |
+| Driveways    | 27,368 |
+| Meters       | 3,400  |
+| City Garages | 1,380  |
+| **Total**    | **107,419** |
 
 There are about [50,000](https://www.census.gov/quickfacts/fact/table/cambridgecitymassachusetts/PST045222) households in Cambridge, so this works out to at least two spots per household.
 
