@@ -13,7 +13,7 @@ Adding these to the on street spaces brings my estimated lower bound of Cambridg
 
 
 | Flavor       | Count  |
-|--------------|--------|
+|--------------|-------:|
 | On Street    | 31,474 |
 | Parking Lot  | 43,797 |
 | Driveways    | 27,368 |
