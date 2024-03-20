@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Environmental Impact of Fried Foods
+title: Environmental impact of fried foods
 ---
 
 Note: this post was put together on a whim on a Friday afternoon; the analysis is woefully incomplete. I hope to update it, though my historical track record on updating blog posts and personal projects is remarkably terrible. That said, if you have any relevant information or insights, please reach out!

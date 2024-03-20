@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shake-Tempering Chocolate
+title: Shake-tempering chocolate
 ---
 ![bonbons]({{ site.baseurl }}/images/chocolate/bonbons.JPG "Three flavors of bonbons"){: .img-80}
 tldr: microplane 2% seed chocolate into fully melted chocolate at 94F and shake the heck out of it.

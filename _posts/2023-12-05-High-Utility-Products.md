@@ -1,6 +1,6 @@
 ---
 layout: post
-title: High Utility Product Recommendations
+title: High utility product recommendations
 last_modified_at: 2023-12-06
 ---
 

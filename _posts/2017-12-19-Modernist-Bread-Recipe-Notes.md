@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modernist Bread Recipe Notes
+title: Modernist Bread recipe notes
 ---
 
 ### Initial baking results ###

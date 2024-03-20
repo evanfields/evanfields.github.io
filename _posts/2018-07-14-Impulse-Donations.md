@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Impulse Donations
+title: Impulse donations
 ---
 
 Update: the system described in this post no longer works, as PandaPay appears to be defunct. If you know of a replacement for PandaPay or the system described in this post, please let me know!

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blender Tutorial Reflections
+title: Blender tutorial reflections
 ---
 
 For my entire adult life (and most of my teenage life), I've had a casual interest in computer graphics, especially 3D graphics.

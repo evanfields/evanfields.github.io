@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cambridge Has (at least) Two Parking Spaces Per Household
+title: Cambridge has (at least) two parking spaces per household
 ---
 
 A [previous post](https://evanfields.net/Cambridge-Street-Parking/) estimated Cambridge's non-metered street parking at 31,474 spaces, approximately one per car-owning household. But these spaces constitute a minority of Cambridge's total parking supply. Here I estimate two other big chunks of our total supply:
