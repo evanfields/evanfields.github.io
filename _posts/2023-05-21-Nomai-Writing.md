@@ -20,7 +20,7 @@ In-game, translation is handled by a device you carry: point at a sample of Noma
 
 Outer Wilds has resonated with me since I first played it: partly because it's just an excellent game, partly because the gameplay and setting align with my personal preferences (exploration, spaceflight, etc.), and partly because the game's expression of philosphical themes helped me work through grief over a terminal illness in my family. I can think of no other work of art—in any medium—that has affected me as much. Recently I asked my wife to play through it with me (she did the exploration, I flew the ship; OW isn't a twitchy game, but flight requires some dexterity), and watching her play inspired me to engage with the Outer Wilds world via a personal project.
 
-Despite being fictional aliens, the Nomai are deeply human and offer much to admire. I quite enjoy the aesthetics of the Nomai writing, so I decided to build [Nomai Writing](nomai-writing.com), a tool which maps any text to a unique spiral of Nomai-style writing.
+Despite being fictional aliens, the Nomai are deeply human and offer much to admire. I quite enjoy the aesthetics of the Nomai writing, so I decided to build [Nomai Writing](https://nomai-writing.com), a tool which maps any text to a unique spiral of Nomai-style writing.
 
 ## nomai-writing.com
 ### Main functionality
