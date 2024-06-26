@@ -64,7 +64,7 @@ Health is complicated [citation needed]; presumably simple calorie regulation is
 
 - At least 25g of fiber per day. I increasingly read that fiber is extremely important, especially for microbiome health. I don't think that's a controversial claim, but see e.g. "If Our Bodies Could Talk" by [James Hamblin](https://www.theatlantic.com/author/james-hamblin/) for a recent and humorous take on this and other health topics.
 - At least 4 servings of fruits or vegetables per day. Probably this should be higher.
-- At least 60g of protein per day. Some sources - particularly those targetting males looking to increase their muscle mass -ecommend way more, but this is a pretty middle of the road mainstream recommendation.
+- At least 60g of protein per day. Some sources - particularly those targetting males looking to increase their muscle mass - recommend way more, but this is a pretty middle of the road mainstream recommendation.
 
 Note that I haven't added any constraints on minimum fat and carbohydrates. See e.g. [here](http://www.stephanguyenet.com/meta-analysis-impact-of-carbohydrate-vs-fat-calories-on-energy-expenditure-and-body-fatness/) for a writeup of a meta-analysis comparing fat-heavy and carbohydrate-heavy diets. Anyway, given my dietary preferences for cookies and ice cream, neither should be a problem. Let `fiber_i`, `protein_i`, and `fruitveg_i` indicate the respective fiber, protein, and fruit/vegetable contents of each food.
 ```
