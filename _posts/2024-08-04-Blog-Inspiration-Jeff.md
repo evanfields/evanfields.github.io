@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blog inspiration: Jeff Kaufman
+title: "Blog inspiration: Jeff Kaufman"
 ---
 I've been reading [Jeff Kaufman](https://www.jefftk.com/about)'s blog for years because he's well known in the effective altruist[^1] space and local to the Boston area. We're also now [coworkers](https://naobservatory.org/), which is pretty cool. One of many things I like about Jeff's blog: he interleaves many different kinds of posts. Some are deeply technical or philosophical, but others are quick notes about what's going on in his life. This variety imbues the blog with a pleasant texture.
 
