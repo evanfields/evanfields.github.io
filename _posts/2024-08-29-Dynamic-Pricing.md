@@ -23,6 +23,7 @@ It's probably not that big of a deal if a single seller subject to robust compet
 I don't have high confidence that all discriminatory pricing is high. Maybe more seller surplus has good second order effects, like making more sellers. Maybe the rural hospital should be allowed to price discriminate so that we have more rural hospitals. Maybe there are obvious effects I'm missing since I am, in fact, not an economist!
 
 For years, I've toyed with the idea of doing a midlife career switch and running a tiny one-man sourdough pizza shop (working name: Workshop Pizza). The actual likelihood of this is...maybe 25%?...but it's fun to imagine the details. And for sure, my imaginary Workshop Pizza charges more for pizzas on Friday night than Tuesday afternoon.
+
 ---
 
 [^1]: The mixture of customers might change. In a higher price regime, people who were previously excluded by the high time cost of the line (busy parents?) might opt in, while people who can't afford the new higher price opt out. 
